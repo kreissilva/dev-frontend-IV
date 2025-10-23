@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - ONG Transforma Vida</title>
+    <meta name="description" content="Conheça nossos projetos e saiba como participar.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo</a>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="theme-toggle">
+                <button id="darkModeToggle" aria-label="Alternar modo escuro" class="theme-btn">
+                    <span class="sr-only">Modo escuro</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3a9 9 0 109 9c0-4.97-4.03-9-9-9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button id="highContrastToggle" aria-label="Alternar alto contraste" class="theme-btn">
+                    <span class="sr-only">Alto contraste</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                        <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav aria-label="Menu principal">
+            <ul id="menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="projetos.html" role="menuitem" aria-current="page">Projetos</a></li>
+                <li role="none"><a href="cadastro.html" role="menuitem">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+        <section class="grid">
+            <div class="card" style="grid-column: span 12;">
+                <img src="../images/logo_ong.png" alt="Logo da ONG" width="125">
+                <h2>Nossos Projetos</h2>
+            </div>
+            <article class="card" style="grid-column: span 6;">
+                <h3>Projeto Educar</h3>
+                <p>Oferecemos aulas de reforço escolar para crianças carentes.</p>
+                <img src="../images/projeto_educar.png" alt="Crianças estudando" width="100%">
+            </article>
+            <article class="card" style="grid-column: span 6;">
+                <h3>Projeto Alimentação Saudável</h3>
+                <p>Distribuímos cestas básicas e oferecemos orientação nutricional.</p>
+                <img src="../images/projeto_alimenta.png" alt="Distribuição de alimentos" width="100%">
+            </article>
+        </section>
+
+        <section class="grid">
+            <div class="card" style="grid-column: span 12;">
+                <h2>Voluntariado</h2>
+                <p>Venha ser um voluntário e fazer a diferença na comunidade.</p>
+                <a href="cadastro.html" class="btn">Seja Voluntário</a>
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="card" style="grid-column: span 12;">
+                <h2>Doações</h2>
+                <p>Sua doação é muito importante para continuarmos nosso trabalho.</p>
+                <p>Pix: doe@ongtransformavida.org</p>
+                <a href="cadastro.html" class="btn btn-secondary">Fazer Doação</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ONG Transforma Vida. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../js/app.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const router = new SPARouter("conteudo-principal");
+            router.initAccessibility();
+            router.initThemeToggles();
+        });
+    </script>
+    </script>
+</body>
+</html>
